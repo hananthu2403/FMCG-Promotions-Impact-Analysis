@@ -1,113 +1,102 @@
-# FMCG-Promotions-Impact-Analysis
-Brief project summary
+FMCG Promotions Impact Analysis | SQL & Power BI Project | AtliQ Mart
 
+🛒 Project Overview
 
-🛒 FMCG Promotions Impact Analysis | SQL & Power BI Project | AtliQ Mart
-📊 Project Overview
-This project analyzes the effectiveness of promotional campaigns (Diwali 2023 & Sankranti 2024) conducted by AtliQ Mart, a leading FMCG retailer with 50+ stores across South India. Using SQL and Power BI, the project provides actionable insights into revenue uplift, product performance, and promotional strategies to support data-driven decision-making for future campaigns.
+This project evaluates the effectiveness of promotional campaigns (Diwali 2023 & Sankranti 2024) conducted by AtliQ Mart, a leading FMCG retailer with 50+ stores across South India. Using SQL and Power BI, actionable insights were generated to assess revenue uplift, product performance, and promotional strategies — supporting data-driven decisions for future campaigns.
 
-🎯 Business Objective
-To evaluate:
+🎯 Business Objectives
+- Identify top and underperforming promotions
 
-  - Which promotions performed well and which did not
+- Analyze store, city, and product-wise performance
 
-  - Store, city, and product-wise performance during promotions
+- Evaluate the impact of different promotion types (Discounts, BOGOF, Cashback)
 
-  - Impact of promotion types (Discounts, BOGOF, Cashback) on sales
+- Track high-value products offered under heavy discounts
 
-  - High-value products under heavy discounts
-
-  - Revenue comparison before and after campaigns
+- Compare revenue before and after promotional campaigns
 
 🛠️ Tools & Technologies
 
-SQL (MySQL) - Data Cleaning, Transformation & Ad-hoc Analysis
+SQL (MySQL): Data cleaning, transformation, and ad-hoc analysis
 
-Power BI - Interactive Dashboards & Visualizations
+Power BI: Interactive dashboards and visualizations
 
-Excel - Data exports & Pre-processing
+Excel: Data exports and pre-processing
 
-DAX - KPI & Growth Metric Calculations
+DAX: KPI & growth metric calculations
 
 🗂️ Dataset Description
-
-The project uses a structured database containing:
-
-Table	Description
-dim_campaigns	Details of promotional campaigns (Diwali, Sankranti)
+Table Name	Description
+dim_campaigns	Promotional campaign details (Diwali, Sankranti)
 dim_products	Product details with categories
 dim_stores	Store IDs and corresponding cities
 fact_events	Sales data before and after promotions
 
-💡 Key Insights Generated
-  - Top 10 Stores by Incremental Revenue
+💡 Key Insights
+- Top 10 stores by incremental revenue
 
-  - Bottom 10 Stores by Incremental Sold Units (ISU)
+- Bottom 10 stores by incremental sold units (ISU)
 
-  - Best Performing Promotion Types
+- Best-performing promotion types
 
-  - Product Categories with highest ISU%
+- Product categories with highest ISU%
 
-  - City-wise Revenue Trends
+- City-wise revenue trends
 
-  - High-Value BOGOF Products
+- High-value products under BOGOF promotion
 
-  - Campaign-wise Revenue Comparison (Before & After)
+- Campaign-wise revenue comparison (before vs after promotions)
 
 📊 Dashboard Preview
-The interactive Power BI dashboard includes:
-
-✅ Executive Summary KPIs
-✅ Store & City Performance Analysis
-✅ Promotion Type Effectiveness
-✅ Product & Category Deep Dive
-
+The Power BI dashboard features:
+✅ Executive summary KPIs
+✅ Store & city performance analysis
+✅ Promotion type effectiveness
+✅ Product & category performance deep dive
 
 📁 Repository Structure
-FMCG-Promotions-Impact-Analysis/
+FMCG-Promotions-Impact-Analysis/  
+│  
+├── FMCG/  
+│   ├── Ad-hoc/  
+│   │   ├── Product IR %.xlsx  
+│   │   ├── Category - ISU% - Rank.xlsx  
+│   │   ├── Campaign wise Revenue.xlsx  
+│   │   ├── Citywise store Count.xlsx  
+│   │   └── High-value BOGOF Products.xlsx  
+│   ├── dim_campaigns.xlsx  
+│   ├── dim_products.xlsx  
+│   ├── dim_stores.xlsx  
+│   ├── fact_events.xlsx  
+│   ├── retail_events_db.sql  
+│   └── insights/  
+│       ├── Promotion Type Analysis/  
+│       │   ├── Compare Discount vs. BOGOF vs. Cashback Performance.csv  
+│       │   ├── Bottom 2 Promotion Types by ISU.csv  
+│       │   └── Top 2 Promotion Types by Incremental Revenue.csv  
+│       ├── Product & Category Analysis/  
+│       │   ├── Correlation Between Promotion Type & Product Category.csv  
+│       │   ├── Bottom 5 Products by Incremental Revenue.csv  
+│       │   ├── Top 5 Products by Incremental Revenue.csv  
+│       │   └── Product Categories with Highest Sales Lift.csv  
+│       └── Store Performance Analysis/  
+│           ├── Citywise store performance comparison.csv  
+│           ├── Bottom 10 stores by ISU.csv  
+│           └── Top 10 stores by Incremental Revenue.csv  
+├── FMCG Promotions Impact Analysis.pbix  
+├── Promotions_Analysis.sql  
+└── README.md  
 
-📁 FMCG/
-  │   ├── 📁 Ad-hoc/
-  │   │        ├── Product IR %.xlsx
-  │   │        ├── Category - ISU% - Rank.xlsx
-  │   │        ├── Campaign wise Revenue.xlsx
-  │   │        │── Citywise store Count.xlsx
-  │   │        ├── High-value BOGOF Products.xlsx
-  │   ├── dim_campaigns.xlsx
-  │   ├── dim_products.xlsx
-  │   ├── dim_stores.xlsx
-  │   ├── fact_events.xlsx
-  │   ├── retail_events_db.sql
-  │   └── 📁 insights/
-  │              ├── 📁 Promotion Type Analysis/
-  │                        ├── Compare Discount vs. BOGOF vs. Cashback Performance.csv
-  │                        ├── Bottom 2 Promotion Types by Incremental Sold Units (ISU).csv
-  │                        ├── Top 2 Promotion Types by Incremental Revenue.csv
-  │              ├── 📁 Product & Category Analysis/
-  │                        ├── Correlation Between Promotion Type & Product Category.csv
-  │                        ├── Bottom 5 Products by Incremental Revenue.csv
-  │                        ├── Top 5 Products by Incremental Revenue.csv
-  │                        ├── Product Categories with Highest Sales Lift.csv
-  │              ├── 📁 Store Performance Analysis/
-  │                        ├── Citywise store perf comp.csv
-  │                        ├── Bottom 10 stores by Incremental Sold Units (ISU).csv
-  │                        ├── Top 10 stores by Incremental Revenue (IR).csv
-  │
-  ├── FMCG Promotions Impact Analysis.pbix
-  ├──Promotions_Analysis.sql
-  └── README.md
+📝 Learnings & Reflections
+- Writing optimized SQL for real-world business scenarios
 
-📝 Learnings & Reflection
-
-This project enhanced my skills in:
-
-- Writing optimized SQL queries for real-world business questions
 - Transforming raw data into actionable insights
+
 - Designing clean, executive-friendly Power BI dashboards
-- Communicating findings effectively for decision-makers
+
+- Presenting findings effectively to drive business decisions
 
 🔗 Connect with Me
-https://www.linkedin.com/in/hanisha-ananthula-432284242/
-
+linkedin.com/in/hanisha-ananthula-432284242/
 
 
